@@ -10,8 +10,7 @@ public class Product {
 	private String unit;
 	private String photoPath;
 
-	public Product(int id, String vendorID, String partNumber, String name, double price, String unit,
-			String photoPath) {
+	public Product(int id, String vendorID, String partNumber, String name, double price, String unit) {
 		super();
 		this.id = id;
 		this.vendorID = vendorID;
@@ -19,7 +18,7 @@ public class Product {
 		this.name = name;
 		this.price = price;
 		this.unit = unit;
-		this.photoPath = photoPath;
+		//this.photoPath = photoPath;
 	}
 
 	public int getId() {
