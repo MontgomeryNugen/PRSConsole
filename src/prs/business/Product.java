@@ -3,14 +3,14 @@ package prs.business;
 public class Product {
 
 	private int id;
-	private String vendorID;
+	private int vendorID;
 	private String partNumber;
 	private String name;
 	private double price;
 	private String unit;
 	private String photoPath;
 
-	public Product(int id, String vendorID, String partNumber, String name, double price, String unit) {
+	public Product(int id, int vendorID, String partNumber, String name, double price, String unit, String photoPath) {
 		super();
 		this.id = id;
 		this.vendorID = vendorID;
@@ -18,8 +18,18 @@ public class Product {
 		this.name = name;
 		this.price = price;
 		this.unit = unit;
-		//this.photoPath = photoPath;
+		this.photoPath = photoPath;
 	}
+
+	public Product(int vendorID, String partNumber, String name, double price) {
+		super();
+		this.vendorID = vendorID;
+		this.partNumber = partNumber;
+		this.name = name;
+		this.price = price;
+	}
+
+
 
 	public int getId() {
 		return id;
@@ -29,11 +39,11 @@ public class Product {
 		this.id = id;
 	}
 
-	public String getVendorID() {
+	public int getVendorID() {
 		return vendorID;
 	}
 
-	public void setVendorID(String vendorID) {
+	public void setVendorID(int vendorID) {
 		this.vendorID = vendorID;
 	}
 
